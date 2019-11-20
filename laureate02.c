@@ -10,7 +10,9 @@ int main()
     int numbers;
   };
 
- struct car car0;
+  struct car car0;
+
+  char list[10];
 
   /*marca do veículo*/
 
@@ -30,8 +32,13 @@ int main()
   scanf("%s", car0.letters);
   printf("tell now the last 4 numbers \n");
   scanf("%d", &car0.numbers);
-  printf("your identifier is: %s-%d ", car0.letters, car0.numbers);
+  printf("your identifier is: %s-%d \n", car0.letters, car0.numbers);
 
+  int count = 0;
+  while ( count < 10) {
+    printf("%d \n", count);
+    count++;
+  }
 
   return 0;
 }
