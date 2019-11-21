@@ -35,9 +35,9 @@ int main()
   printf("your identifier is: %s-%d \n", list_car[i].letters, list_car[i].numbers);
 
   /*sort*/
+
   key = list_car[i].model;
   j = i - 1;
-  printf("%d", key);
 
   while(j >= 0 && list_car[j].model > key) {
     list_car[j + 1] = list_car[j];
@@ -46,6 +46,13 @@ int main()
 
   list_car[j + 1].model = key;
 
+  }
+
+  /*print the list of object*/
+
+  int k;
+  for(k = 0; k < 2; k++) {
+    printf("%s %d %s %d \n", list_car[k].brand, list_car[k].model, list_car[k].letters, list_car[k].numbers);
   }
 
   return 0;
