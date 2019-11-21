@@ -11,7 +11,7 @@ int main()
   };
 
   struct car list_car[2];
-  int i;
+  int i, key, j;
   for (i = 0; i < 2; i++) {
 
   /*marca do veículo*/
@@ -34,9 +34,19 @@ int main()
   scanf("%d", &list_car[i].numbers);
   printf("your identifier is: %s-%d \n", list_car[i].letters, list_car[i].numbers);
 
+  /*sort*/
+  key = list_car[i].model;
+  j = i - 1;
+  printf("%d", key);
+
+  while(j >= 0 && list_car[j].model > key) {
+    list_car[j + 1] = list_car[j];
+    j = j - 1;
   }
 
-  printf("%p", &list_car);
+  list_car[j + 1].model = key;
+
+  }
 
   return 0;
 }
